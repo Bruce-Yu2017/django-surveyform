@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>result</title>
+</head>
+<body>
+  <h3>Submitted Information</h3>
+  Name: {{request.session.name}}<br>
+  Dojo location: {{request.session.location}}<br>
+  Favorite Language: {{request.session.language}}<br>
+  Comment: {{request.session.comment}}<br>
+  <form action="/result" method="post">
+    {% csrf_token %}
+    <input type="submit" value="go back">
+  </form>
+</body>
+</html>
